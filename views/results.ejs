@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Results</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Programming Language Survey</h1>
+    <h2>Results:</h2></h2>
+    <div id="language-table">
+      <ul>
+        <% for (var i=0; i < languages.length; i++) { %>
+          <li><%=languages[i].language%>: <%=languages[i].votes%></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>

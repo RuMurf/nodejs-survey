@@ -30,8 +30,16 @@ module.exports = function(app){
         //submit vote to database
         Language.updateOne({language: req.params.item}, { $inc: { votes: 1 }}, function(err,data){
             if (err) throw err;
-            console.log(req.params.item);
+            //res.render('results', {languages: data});
             res.json(data);
+        });
+    });
+
+    app.get('/results', function(req,res){
+        // get data from mongodb and pass it to the view
+        Language.find({}, function(err, data){
+          if (err) throw err;
+          res.render('results', {languages: data});
         });
     });
 };
