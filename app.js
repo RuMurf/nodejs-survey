@@ -1,5 +1,10 @@
 var express = require('express');
+var surveyController = require('./controllers/surveyController');
 var app = express();
+
+app.set('view engine', 'ejs');
+
+surveyController(app);
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
