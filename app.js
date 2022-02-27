@@ -3,6 +3,7 @@ var surveyController = require('./controllers/surveyController');
 var app = express();
 
 app.set('view engine', 'ejs');
+app.use(express.static('./public'));
 
 surveyController(app);
 

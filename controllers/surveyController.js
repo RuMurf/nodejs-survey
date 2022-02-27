@@ -25,4 +25,13 @@ module.exports = function(app){
           res.render('survey', {languages: data});
         });
     });
+
+    app.put('/submit/:item', function(req,res){
+        //submit vote to database
+        Language.updateOne({language: req.params.item}, { $inc: { votes: 1 }}, function(err,data){
+            if (err) throw err;
+            console.log(req.params.item);
+            res.json(data);
+        });
+    });
 };
