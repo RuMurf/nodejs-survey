@@ -1,0 +1,15 @@
+{
+  "name": "survey",
+  "version": "1.0.0",
+  "description": "ct414 assignment 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruairí Murphy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3"
+  }
+}
