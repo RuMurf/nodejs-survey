@@ -5,7 +5,7 @@ var config = require('./config.json');
 //import express
 var app = express();
 //connect to mongodb
-mongoose.connect('mongodb+srv://'+config.mongo_username+':'+config.mongo_password+'@cluster0.kczw4.mongodb.net/survey?retryWrites=true&w=majority');
+mongoose.connect(config.mongo_connection_string);
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
